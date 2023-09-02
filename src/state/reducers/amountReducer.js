@@ -1,12 +1,14 @@
 // by default state is 0
-export default reducer = (state = 0, action) => {
-    if (action.type == 'deposit') {
+const reducer = (state = 0, action) => {
+    if (action.type === 'deposit') {
         return state + action.payload
     }
-    else if (action.type == 'withdraw') {
+    else if (action.type === 'withdraw') {
         return state - action.payload
     }
     else{
         return state
     }
 }
+
+export default reducer
